@@ -6,6 +6,7 @@ import proto.SpaceStation;
 public class Main {
 
     public static void main(String[] args) {
+
         Captain.Builder builder = Captain.newBuilder();
 
         Captain joe = builder
@@ -21,7 +22,20 @@ public class Main {
         boeing.setCrew(3).setCargo("gold").setName("Orion").build();
 
         ds9.setCaptain(joe).addSpaceships(boeing).build();
+        System.out.println(ds9);
 
-        System.out.println( ds9);
+        ds9.setCaptain(Captain.newBuilder()
+            .setName("Paddy")
+            .setRace(RaceType.KLINGON))
+            .addSpaceships(SpaceShip.newBuilder()
+                .setName("Task runner")
+                .setCargo("Silver")
+                .setCrew(3)
+                .build());
+
+
+        System.out.println(ds9);
+
+
     }
 }
