@@ -4,11 +4,11 @@
 package com.example.tutorial.protos;
 
 /**
- * Protobuf type {@code tutorial.Person}
+ * Protobuf type {@code Person}
  */
 public  final class Person extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:tutorial.Person)
+    // @@protoc_insertion_point(message_implements:Person)
     PersonOrBuilder {
   // Use Person.newBuilder() to construct.
   private Person(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -92,18 +92,18 @@ public  final class Person extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.example.tutorial.protos.AddressBookProtos.internal_static_tutorial_Person_descriptor;
+    return com.example.tutorial.protos.AddressBookProtos.internal_static_Person_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.example.tutorial.protos.AddressBookProtos.internal_static_tutorial_Person_fieldAccessorTable
+    return com.example.tutorial.protos.AddressBookProtos.internal_static_Person_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.example.tutorial.protos.Person.class, com.example.tutorial.protos.Person.Builder.class);
   }
 
   /**
-   * Protobuf enum {@code tutorial.Person.PhoneType}
+   * Protobuf enum {@code Person.PhoneType}
    */
   public enum PhoneType
       implements com.google.protobuf.ProtocolMessageEnum {
@@ -198,11 +198,11 @@ public  final class Person extends
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:tutorial.Person.PhoneType)
+    // @@protoc_insertion_point(enum_scope:Person.PhoneType)
   }
 
   public interface PhoneNumberOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:tutorial.Person.PhoneNumber)
+      // @@protoc_insertion_point(interface_extends:Person.PhoneNumber)
       com.google.protobuf.MessageOrBuilder {
 
     /**
@@ -220,20 +220,20 @@ public  final class Person extends
         getNumberBytes();
 
     /**
-     * <code>optional .tutorial.Person.PhoneType type = 2 [default = HOME];</code>
+     * <code>optional .Person.PhoneType type = 2 [default = HOME];</code>
      */
     boolean hasType();
     /**
-     * <code>optional .tutorial.Person.PhoneType type = 2 [default = HOME];</code>
+     * <code>optional .Person.PhoneType type = 2 [default = HOME];</code>
      */
     com.example.tutorial.protos.Person.PhoneType getType();
   }
   /**
-   * Protobuf type {@code tutorial.Person.PhoneNumber}
+   * Protobuf type {@code Person.PhoneNumber}
    */
   public  static final class PhoneNumber extends
       com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:tutorial.Person.PhoneNumber)
+      // @@protoc_insertion_point(message_implements:Person.PhoneNumber)
       PhoneNumberOrBuilder {
     // Use PhoneNumber.newBuilder() to construct.
     private PhoneNumber(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -303,12 +303,12 @@ public  final class Person extends
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.example.tutorial.protos.AddressBookProtos.internal_static_tutorial_Person_PhoneNumber_descriptor;
+      return com.example.tutorial.protos.AddressBookProtos.internal_static_Person_PhoneNumber_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.tutorial.protos.AddressBookProtos.internal_static_tutorial_Person_PhoneNumber_fieldAccessorTable
+      return com.example.tutorial.protos.AddressBookProtos.internal_static_Person_PhoneNumber_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.example.tutorial.protos.Person.PhoneNumber.class, com.example.tutorial.protos.Person.PhoneNumber.Builder.class);
     }
@@ -359,13 +359,13 @@ public  final class Person extends
     public static final int TYPE_FIELD_NUMBER = 2;
     private int type_;
     /**
-     * <code>optional .tutorial.Person.PhoneType type = 2 [default = HOME];</code>
+     * <code>optional .Person.PhoneType type = 2 [default = HOME];</code>
      */
     public boolean hasType() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional .tutorial.Person.PhoneType type = 2 [default = HOME];</code>
+     * <code>optional .Person.PhoneType type = 2 [default = HOME];</code>
      */
     public com.example.tutorial.protos.Person.PhoneType getType() {
       com.example.tutorial.protos.Person.PhoneType result = com.example.tutorial.protos.Person.PhoneType.valueOf(type_);
@@ -533,20 +533,20 @@ public  final class Person extends
       return builder;
     }
     /**
-     * Protobuf type {@code tutorial.Person.PhoneNumber}
+     * Protobuf type {@code Person.PhoneNumber}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:tutorial.Person.PhoneNumber)
+        // @@protoc_insertion_point(builder_implements:Person.PhoneNumber)
         com.example.tutorial.protos.Person.PhoneNumberOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return com.example.tutorial.protos.AddressBookProtos.internal_static_tutorial_Person_PhoneNumber_descriptor;
+        return com.example.tutorial.protos.AddressBookProtos.internal_static_Person_PhoneNumber_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return com.example.tutorial.protos.AddressBookProtos.internal_static_tutorial_Person_PhoneNumber_fieldAccessorTable
+        return com.example.tutorial.protos.AddressBookProtos.internal_static_Person_PhoneNumber_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 com.example.tutorial.protos.Person.PhoneNumber.class, com.example.tutorial.protos.Person.PhoneNumber.Builder.class);
       }
@@ -577,7 +577,7 @@ public  final class Person extends
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return com.example.tutorial.protos.AddressBookProtos.internal_static_tutorial_Person_PhoneNumber_descriptor;
+        return com.example.tutorial.protos.AddressBookProtos.internal_static_Person_PhoneNumber_descriptor;
       }
 
       public com.example.tutorial.protos.Person.PhoneNumber getDefaultInstanceForType() {
@@ -760,20 +760,20 @@ public  final class Person extends
 
       private int type_ = 1;
       /**
-       * <code>optional .tutorial.Person.PhoneType type = 2 [default = HOME];</code>
+       * <code>optional .Person.PhoneType type = 2 [default = HOME];</code>
        */
       public boolean hasType() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional .tutorial.Person.PhoneType type = 2 [default = HOME];</code>
+       * <code>optional .Person.PhoneType type = 2 [default = HOME];</code>
        */
       public com.example.tutorial.protos.Person.PhoneType getType() {
         com.example.tutorial.protos.Person.PhoneType result = com.example.tutorial.protos.Person.PhoneType.valueOf(type_);
         return result == null ? com.example.tutorial.protos.Person.PhoneType.HOME : result;
       }
       /**
-       * <code>optional .tutorial.Person.PhoneType type = 2 [default = HOME];</code>
+       * <code>optional .Person.PhoneType type = 2 [default = HOME];</code>
        */
       public Builder setType(com.example.tutorial.protos.Person.PhoneType value) {
         if (value == null) {
@@ -785,7 +785,7 @@ public  final class Person extends
         return this;
       }
       /**
-       * <code>optional .tutorial.Person.PhoneType type = 2 [default = HOME];</code>
+       * <code>optional .Person.PhoneType type = 2 [default = HOME];</code>
        */
       public Builder clearType() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -804,10 +804,10 @@ public  final class Person extends
       }
 
 
-      // @@protoc_insertion_point(builder_scope:tutorial.Person.PhoneNumber)
+      // @@protoc_insertion_point(builder_scope:Person.PhoneNumber)
     }
 
-    // @@protoc_insertion_point(class_scope:tutorial.Person.PhoneNumber)
+    // @@protoc_insertion_point(class_scope:Person.PhoneNumber)
     private static final com.example.tutorial.protos.Person.PhoneNumber DEFAULT_INSTANCE;
     static {
       DEFAULT_INSTANCE = new com.example.tutorial.protos.Person.PhoneNumber();
@@ -945,32 +945,32 @@ public  final class Person extends
   public static final int PHONES_FIELD_NUMBER = 4;
   private java.util.List<com.example.tutorial.protos.Person.PhoneNumber> phones_;
   /**
-   * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+   * <code>repeated .Person.PhoneNumber phones = 4;</code>
    */
   public java.util.List<com.example.tutorial.protos.Person.PhoneNumber> getPhonesList() {
     return phones_;
   }
   /**
-   * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+   * <code>repeated .Person.PhoneNumber phones = 4;</code>
    */
   public java.util.List<? extends com.example.tutorial.protos.Person.PhoneNumberOrBuilder> 
       getPhonesOrBuilderList() {
     return phones_;
   }
   /**
-   * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+   * <code>repeated .Person.PhoneNumber phones = 4;</code>
    */
   public int getPhonesCount() {
     return phones_.size();
   }
   /**
-   * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+   * <code>repeated .Person.PhoneNumber phones = 4;</code>
    */
   public com.example.tutorial.protos.Person.PhoneNumber getPhones(int index) {
     return phones_.get(index);
   }
   /**
-   * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+   * <code>repeated .Person.PhoneNumber phones = 4;</code>
    */
   public com.example.tutorial.protos.Person.PhoneNumberOrBuilder getPhonesOrBuilder(
       int index) {
@@ -1167,20 +1167,20 @@ public  final class Person extends
     return builder;
   }
   /**
-   * Protobuf type {@code tutorial.Person}
+   * Protobuf type {@code Person}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:tutorial.Person)
+      // @@protoc_insertion_point(builder_implements:Person)
       com.example.tutorial.protos.PersonOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.example.tutorial.protos.AddressBookProtos.internal_static_tutorial_Person_descriptor;
+      return com.example.tutorial.protos.AddressBookProtos.internal_static_Person_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.tutorial.protos.AddressBookProtos.internal_static_tutorial_Person_fieldAccessorTable
+      return com.example.tutorial.protos.AddressBookProtos.internal_static_Person_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.example.tutorial.protos.Person.class, com.example.tutorial.protos.Person.Builder.class);
     }
@@ -1220,7 +1220,7 @@ public  final class Person extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.example.tutorial.protos.AddressBookProtos.internal_static_tutorial_Person_descriptor;
+      return com.example.tutorial.protos.AddressBookProtos.internal_static_Person_descriptor;
     }
 
     public com.example.tutorial.protos.Person getDefaultInstanceForType() {
@@ -1566,7 +1566,7 @@ public  final class Person extends
         com.example.tutorial.protos.Person.PhoneNumber, com.example.tutorial.protos.Person.PhoneNumber.Builder, com.example.tutorial.protos.Person.PhoneNumberOrBuilder> phonesBuilder_;
 
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public java.util.List<com.example.tutorial.protos.Person.PhoneNumber> getPhonesList() {
       if (phonesBuilder_ == null) {
@@ -1576,7 +1576,7 @@ public  final class Person extends
       }
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public int getPhonesCount() {
       if (phonesBuilder_ == null) {
@@ -1586,7 +1586,7 @@ public  final class Person extends
       }
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public com.example.tutorial.protos.Person.PhoneNumber getPhones(int index) {
       if (phonesBuilder_ == null) {
@@ -1596,7 +1596,7 @@ public  final class Person extends
       }
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public Builder setPhones(
         int index, com.example.tutorial.protos.Person.PhoneNumber value) {
@@ -1613,7 +1613,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public Builder setPhones(
         int index, com.example.tutorial.protos.Person.PhoneNumber.Builder builderForValue) {
@@ -1627,7 +1627,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public Builder addPhones(com.example.tutorial.protos.Person.PhoneNumber value) {
       if (phonesBuilder_ == null) {
@@ -1643,7 +1643,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public Builder addPhones(
         int index, com.example.tutorial.protos.Person.PhoneNumber value) {
@@ -1660,7 +1660,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public Builder addPhones(
         com.example.tutorial.protos.Person.PhoneNumber.Builder builderForValue) {
@@ -1674,7 +1674,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public Builder addPhones(
         int index, com.example.tutorial.protos.Person.PhoneNumber.Builder builderForValue) {
@@ -1688,7 +1688,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public Builder addAllPhones(
         java.lang.Iterable<? extends com.example.tutorial.protos.Person.PhoneNumber> values) {
@@ -1703,7 +1703,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public Builder clearPhones() {
       if (phonesBuilder_ == null) {
@@ -1716,7 +1716,7 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public Builder removePhones(int index) {
       if (phonesBuilder_ == null) {
@@ -1729,14 +1729,14 @@ public  final class Person extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public com.example.tutorial.protos.Person.PhoneNumber.Builder getPhonesBuilder(
         int index) {
       return getPhonesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public com.example.tutorial.protos.Person.PhoneNumberOrBuilder getPhonesOrBuilder(
         int index) {
@@ -1746,7 +1746,7 @@ public  final class Person extends
       }
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public java.util.List<? extends com.example.tutorial.protos.Person.PhoneNumberOrBuilder> 
          getPhonesOrBuilderList() {
@@ -1757,14 +1757,14 @@ public  final class Person extends
       }
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public com.example.tutorial.protos.Person.PhoneNumber.Builder addPhonesBuilder() {
       return getPhonesFieldBuilder().addBuilder(
           com.example.tutorial.protos.Person.PhoneNumber.getDefaultInstance());
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public com.example.tutorial.protos.Person.PhoneNumber.Builder addPhonesBuilder(
         int index) {
@@ -1772,7 +1772,7 @@ public  final class Person extends
           index, com.example.tutorial.protos.Person.PhoneNumber.getDefaultInstance());
     }
     /**
-     * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+     * <code>repeated .Person.PhoneNumber phones = 4;</code>
      */
     public java.util.List<com.example.tutorial.protos.Person.PhoneNumber.Builder> 
          getPhonesBuilderList() {
@@ -1803,10 +1803,10 @@ public  final class Person extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:tutorial.Person)
+    // @@protoc_insertion_point(builder_scope:Person)
   }
 
-  // @@protoc_insertion_point(class_scope:tutorial.Person)
+  // @@protoc_insertion_point(class_scope:Person)
   private static final com.example.tutorial.protos.Person DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.example.tutorial.protos.Person();

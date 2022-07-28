@@ -4,11 +4,11 @@
 package com.example.tutorial.protos;
 
 /**
- * Protobuf type {@code tutorial.AddressBook}
+ * Protobuf type {@code AddressBook}
  */
 public  final class AddressBook extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:tutorial.AddressBook)
+    // @@protoc_insertion_point(message_implements:AddressBook)
     AddressBookOrBuilder {
   // Use AddressBook.newBuilder() to construct.
   private AddressBook(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
@@ -72,12 +72,12 @@ public  final class AddressBook extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return com.example.tutorial.protos.AddressBookProtos.internal_static_tutorial_AddressBook_descriptor;
+    return com.example.tutorial.protos.AddressBookProtos.internal_static_AddressBook_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return com.example.tutorial.protos.AddressBookProtos.internal_static_tutorial_AddressBook_fieldAccessorTable
+    return com.example.tutorial.protos.AddressBookProtos.internal_static_AddressBook_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             com.example.tutorial.protos.AddressBook.class, com.example.tutorial.protos.AddressBook.Builder.class);
   }
@@ -85,32 +85,32 @@ public  final class AddressBook extends
   public static final int PEOPLE_FIELD_NUMBER = 1;
   private java.util.List<com.example.tutorial.protos.Person> people_;
   /**
-   * <code>repeated .tutorial.Person people = 1;</code>
+   * <code>repeated .Person people = 1;</code>
    */
   public java.util.List<com.example.tutorial.protos.Person> getPeopleList() {
     return people_;
   }
   /**
-   * <code>repeated .tutorial.Person people = 1;</code>
+   * <code>repeated .Person people = 1;</code>
    */
   public java.util.List<? extends com.example.tutorial.protos.PersonOrBuilder> 
       getPeopleOrBuilderList() {
     return people_;
   }
   /**
-   * <code>repeated .tutorial.Person people = 1;</code>
+   * <code>repeated .Person people = 1;</code>
    */
   public int getPeopleCount() {
     return people_.size();
   }
   /**
-   * <code>repeated .tutorial.Person people = 1;</code>
+   * <code>repeated .Person people = 1;</code>
    */
   public com.example.tutorial.protos.Person getPeople(int index) {
     return people_.get(index);
   }
   /**
-   * <code>repeated .tutorial.Person people = 1;</code>
+   * <code>repeated .Person people = 1;</code>
    */
   public com.example.tutorial.protos.PersonOrBuilder getPeopleOrBuilder(
       int index) {
@@ -261,20 +261,20 @@ public  final class AddressBook extends
     return builder;
   }
   /**
-   * Protobuf type {@code tutorial.AddressBook}
+   * Protobuf type {@code AddressBook}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:tutorial.AddressBook)
+      // @@protoc_insertion_point(builder_implements:AddressBook)
       com.example.tutorial.protos.AddressBookOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return com.example.tutorial.protos.AddressBookProtos.internal_static_tutorial_AddressBook_descriptor;
+      return com.example.tutorial.protos.AddressBookProtos.internal_static_AddressBook_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return com.example.tutorial.protos.AddressBookProtos.internal_static_tutorial_AddressBook_fieldAccessorTable
+      return com.example.tutorial.protos.AddressBookProtos.internal_static_AddressBook_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               com.example.tutorial.protos.AddressBook.class, com.example.tutorial.protos.AddressBook.Builder.class);
     }
@@ -308,7 +308,7 @@ public  final class AddressBook extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return com.example.tutorial.protos.AddressBookProtos.internal_static_tutorial_AddressBook_descriptor;
+      return com.example.tutorial.protos.AddressBookProtos.internal_static_AddressBook_descriptor;
     }
 
     public com.example.tutorial.protos.AddressBook getDefaultInstanceForType() {
@@ -443,7 +443,7 @@ public  final class AddressBook extends
         com.example.tutorial.protos.Person, com.example.tutorial.protos.Person.Builder, com.example.tutorial.protos.PersonOrBuilder> peopleBuilder_;
 
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public java.util.List<com.example.tutorial.protos.Person> getPeopleList() {
       if (peopleBuilder_ == null) {
@@ -453,7 +453,7 @@ public  final class AddressBook extends
       }
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public int getPeopleCount() {
       if (peopleBuilder_ == null) {
@@ -463,7 +463,7 @@ public  final class AddressBook extends
       }
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public com.example.tutorial.protos.Person getPeople(int index) {
       if (peopleBuilder_ == null) {
@@ -473,7 +473,7 @@ public  final class AddressBook extends
       }
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public Builder setPeople(
         int index, com.example.tutorial.protos.Person value) {
@@ -490,7 +490,7 @@ public  final class AddressBook extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public Builder setPeople(
         int index, com.example.tutorial.protos.Person.Builder builderForValue) {
@@ -504,7 +504,7 @@ public  final class AddressBook extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public Builder addPeople(com.example.tutorial.protos.Person value) {
       if (peopleBuilder_ == null) {
@@ -520,7 +520,7 @@ public  final class AddressBook extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public Builder addPeople(
         int index, com.example.tutorial.protos.Person value) {
@@ -537,7 +537,7 @@ public  final class AddressBook extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public Builder addPeople(
         com.example.tutorial.protos.Person.Builder builderForValue) {
@@ -551,7 +551,7 @@ public  final class AddressBook extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public Builder addPeople(
         int index, com.example.tutorial.protos.Person.Builder builderForValue) {
@@ -565,7 +565,7 @@ public  final class AddressBook extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public Builder addAllPeople(
         java.lang.Iterable<? extends com.example.tutorial.protos.Person> values) {
@@ -580,7 +580,7 @@ public  final class AddressBook extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public Builder clearPeople() {
       if (peopleBuilder_ == null) {
@@ -593,7 +593,7 @@ public  final class AddressBook extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public Builder removePeople(int index) {
       if (peopleBuilder_ == null) {
@@ -606,14 +606,14 @@ public  final class AddressBook extends
       return this;
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public com.example.tutorial.protos.Person.Builder getPeopleBuilder(
         int index) {
       return getPeopleFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public com.example.tutorial.protos.PersonOrBuilder getPeopleOrBuilder(
         int index) {
@@ -623,7 +623,7 @@ public  final class AddressBook extends
       }
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public java.util.List<? extends com.example.tutorial.protos.PersonOrBuilder> 
          getPeopleOrBuilderList() {
@@ -634,14 +634,14 @@ public  final class AddressBook extends
       }
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public com.example.tutorial.protos.Person.Builder addPeopleBuilder() {
       return getPeopleFieldBuilder().addBuilder(
           com.example.tutorial.protos.Person.getDefaultInstance());
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public com.example.tutorial.protos.Person.Builder addPeopleBuilder(
         int index) {
@@ -649,7 +649,7 @@ public  final class AddressBook extends
           index, com.example.tutorial.protos.Person.getDefaultInstance());
     }
     /**
-     * <code>repeated .tutorial.Person people = 1;</code>
+     * <code>repeated .Person people = 1;</code>
      */
     public java.util.List<com.example.tutorial.protos.Person.Builder> 
          getPeopleBuilderList() {
@@ -680,10 +680,10 @@ public  final class AddressBook extends
     }
 
 
-    // @@protoc_insertion_point(builder_scope:tutorial.AddressBook)
+    // @@protoc_insertion_point(builder_scope:AddressBook)
   }
 
-  // @@protoc_insertion_point(class_scope:tutorial.AddressBook)
+  // @@protoc_insertion_point(class_scope:AddressBook)
   private static final com.example.tutorial.protos.AddressBook DEFAULT_INSTANCE;
   static {
     DEFAULT_INSTANCE = new com.example.tutorial.protos.AddressBook();

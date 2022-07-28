@@ -4,7 +4,7 @@
 package com.example.tutorial.protos;
 
 public interface PersonOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:tutorial.Person)
+    // @@protoc_insertion_point(interface_extends:Person)
     com.google.protobuf.MessageOrBuilder {
 
   /**
@@ -45,25 +45,25 @@ public interface PersonOrBuilder extends
       getEmailBytes();
 
   /**
-   * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+   * <code>repeated .Person.PhoneNumber phones = 4;</code>
    */
   java.util.List<com.example.tutorial.protos.Person.PhoneNumber> 
       getPhonesList();
   /**
-   * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+   * <code>repeated .Person.PhoneNumber phones = 4;</code>
    */
   com.example.tutorial.protos.Person.PhoneNumber getPhones(int index);
   /**
-   * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+   * <code>repeated .Person.PhoneNumber phones = 4;</code>
    */
   int getPhonesCount();
   /**
-   * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+   * <code>repeated .Person.PhoneNumber phones = 4;</code>
    */
   java.util.List<? extends com.example.tutorial.protos.Person.PhoneNumberOrBuilder> 
       getPhonesOrBuilderList();
   /**
-   * <code>repeated .tutorial.Person.PhoneNumber phones = 4;</code>
+   * <code>repeated .Person.PhoneNumber phones = 4;</code>
    */
   com.example.tutorial.protos.Person.PhoneNumberOrBuilder getPhonesOrBuilder(
       int index);

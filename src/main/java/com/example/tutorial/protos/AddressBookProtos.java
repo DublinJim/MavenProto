@@ -15,20 +15,20 @@ public final class AddressBookProtos {
         (com.google.protobuf.ExtensionRegistryLite) registry);
   }
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_tutorial_Person_descriptor;
+    internal_static_Person_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_tutorial_Person_fieldAccessorTable;
+      internal_static_Person_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_tutorial_Person_PhoneNumber_descriptor;
+    internal_static_Person_PhoneNumber_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_tutorial_Person_PhoneNumber_fieldAccessorTable;
+      internal_static_Person_PhoneNumber_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_tutorial_AddressBook_descriptor;
+    internal_static_AddressBook_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_tutorial_AddressBook_fieldAccessorTable;
+      internal_static_AddressBook_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -38,15 +38,14 @@ public final class AddressBookProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\021addressbook.proto\022\010tutorial\"\333\001\n\006Person" +
-      "\022\014\n\004name\030\001 \001(\t\022\n\n\002id\030\002 \001(\005\022\r\n\005email\030\003 \001(" +
-      "\t\022,\n\006phones\030\004 \003(\0132\034.tutorial.Person.Phon" +
-      "eNumber\032M\n\013PhoneNumber\022\016\n\006number\030\001 \001(\t\022." +
-      "\n\004type\030\002 \001(\0162\032.tutorial.Person.PhoneType" +
-      ":\004HOME\"+\n\tPhoneType\022\n\n\006MOBILE\020\000\022\010\n\004HOME\020" +
-      "\001\022\010\n\004WORK\020\002\"/\n\013AddressBook\022 \n\006people\030\001 \003" +
-      "(\0132\020.tutorial.PersonB2\n\033com.example.tuto" +
-      "rial.protosB\021AddressBookProtosP\001"
+      "\n\021addressbook.proto\"\311\001\n\006Person\022\014\n\004name\030\001" +
+      " \001(\t\022\n\n\002id\030\002 \001(\005\022\r\n\005email\030\003 \001(\t\022#\n\006phone" +
+      "s\030\004 \003(\0132\023.Person.PhoneNumber\032D\n\013PhoneNum" +
+      "ber\022\016\n\006number\030\001 \001(\t\022%\n\004type\030\002 \001(\0162\021.Pers" +
+      "on.PhoneType:\004HOME\"+\n\tPhoneType\022\n\n\006MOBIL" +
+      "E\020\000\022\010\n\004HOME\020\001\022\010\n\004WORK\020\002\"&\n\013AddressBook\022\027" +
+      "\n\006people\030\001 \003(\0132\007.PersonB2\n\033com.example.t" +
+      "utorial.protosB\021AddressBookProtosP\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -60,23 +59,23 @@ public final class AddressBookProtos {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
         }, assigner);
-    internal_static_tutorial_Person_descriptor =
+    internal_static_Person_descriptor =
       getDescriptor().getMessageTypes().get(0);
-    internal_static_tutorial_Person_fieldAccessorTable = new
+    internal_static_Person_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_tutorial_Person_descriptor,
+        internal_static_Person_descriptor,
         new java.lang.String[] { "Name", "Id", "Email", "Phones", });
-    internal_static_tutorial_Person_PhoneNumber_descriptor =
-      internal_static_tutorial_Person_descriptor.getNestedTypes().get(0);
-    internal_static_tutorial_Person_PhoneNumber_fieldAccessorTable = new
+    internal_static_Person_PhoneNumber_descriptor =
+      internal_static_Person_descriptor.getNestedTypes().get(0);
+    internal_static_Person_PhoneNumber_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_tutorial_Person_PhoneNumber_descriptor,
+        internal_static_Person_PhoneNumber_descriptor,
         new java.lang.String[] { "Number", "Type", });
-    internal_static_tutorial_AddressBook_descriptor =
+    internal_static_AddressBook_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_tutorial_AddressBook_fieldAccessorTable = new
+    internal_static_AddressBook_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_tutorial_AddressBook_descriptor,
+        internal_static_AddressBook_descriptor,
         new java.lang.String[] { "People", });
   }
 
