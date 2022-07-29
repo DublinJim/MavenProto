@@ -10,9 +10,9 @@ public class School {
 
         student.setId(23).setName("Joseo").build();
 
-        Classroom.Builder classBuild = Classroom.newBuilder();
+        Classroom.Builder StAssams = Classroom.newBuilder();
 
-        classBuild.setProf("Bannerhan").addStudent(student)
+        StAssams.setProf("Bannerhan").addStudent(student)
             .addStudent(Student.newBuilder()
                 .setName("MIke")
                 .setId(34))
@@ -20,9 +20,12 @@ public class School {
                 .setId(58)
                 .setName("Rogan"));
 
-        System.out.println(classBuild);
-        System.out.println("Total students : " + classBuild.getStudentCount());
-        System.out.println("Is there a Prof? " + classBuild.hasProf() + ", and his name is "
-            + classBuild.getProf());
+        System.out.println(StAssams);
+        System.out.println("Total students : " + StAssams.getStudentCount());
+        System.out.println("Is there a Prof? " + StAssams.hasProf() + ", and his name is "
+            + StAssams.getProf());
+
+        System.out.println("Sacking the Prof");
+
     }
 }
