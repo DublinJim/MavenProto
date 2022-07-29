@@ -20,8 +20,9 @@ public class School {
                 .setId(58)
                 .setName("Rogan"));
 
-
         System.out.println(classBuild);
-        System.out.println("Total students : "+classBuild.getStudentCount());
+        System.out.println("Total students : " + classBuild.getStudentCount());
+        System.out.println("Is there a Prof? " + classBuild.hasProf() + ", and his name is "
+            + classBuild.getProf());
     }
 }
