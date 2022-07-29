@@ -12,11 +12,16 @@ public class School {
 
         Classroom.Builder classBuild = Classroom.newBuilder();
 
-classBuild.setProf("Bannerhan").addStudent(student)
-    .addStudent(Student.newBuilder()
-    .setName("MIke").setId(34));
+        classBuild.setProf("Bannerhan").addStudent(student)
+            .addStudent(Student.newBuilder()
+                .setName("MIke")
+                .setId(34))
+            .addStudent(Student.newBuilder()
+                .setId(58)
+                .setName("Rogan"));
 
 
         System.out.println(classBuild);
+        System.out.println("Total students : "+classBuild.getStudentCount());
     }
 }
