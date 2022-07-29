@@ -15,6 +15,7 @@ public  final class SpaceStation extends
     super(builder);
   }
   private SpaceStation() {
+    designation_ = "";
     spaceships_ = java.util.Collections.emptyList();
   }
 
@@ -47,8 +48,14 @@ public  final class SpaceStation extends
             break;
           }
           case 10: {
+            com.google.protobuf.ByteString bs = input.readBytes();
+            bitField0_ |= 0x00000001;
+            designation_ = bs;
+            break;
+          }
+          case 18: {
             proto.Captain.Builder subBuilder = null;
-            if (((bitField0_ & 0x00000001) == 0x00000001)) {
+            if (((bitField0_ & 0x00000002) == 0x00000002)) {
               subBuilder = captain_.toBuilder();
             }
             captain_ = input.readMessage(proto.Captain.PARSER, extensionRegistry);
@@ -56,13 +63,13 @@ public  final class SpaceStation extends
               subBuilder.mergeFrom(captain_);
               captain_ = subBuilder.buildPartial();
             }
-            bitField0_ |= 0x00000001;
+            bitField0_ |= 0x00000002;
             break;
           }
-          case 18: {
-            if (!((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+          case 26: {
+            if (!((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
               spaceships_ = new java.util.ArrayList<proto.SpaceShip>();
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000004;
             }
             spaceships_.add(
                 input.readMessage(proto.SpaceShip.PARSER, extensionRegistry));
@@ -76,7 +83,7 @@ public  final class SpaceStation extends
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000002) == 0x00000002)) {
+      if (((mutable_bitField0_ & 0x00000004) == 0x00000004)) {
         spaceships_ = java.util.Collections.unmodifiableList(spaceships_);
       }
       this.unknownFields = unknownFields.build();
@@ -96,56 +103,98 @@ public  final class SpaceStation extends
   }
 
   private int bitField0_;
-  public static final int CAPTAIN_FIELD_NUMBER = 1;
-  private proto.Captain captain_;
+  public static final int DESIGNATION_FIELD_NUMBER = 1;
+  private volatile java.lang.Object designation_;
   /**
-   * <code>required .proto.Captain captain = 1;</code>
+   * <code>required string designation = 1;</code>
    */
-  public boolean hasCaptain() {
+  public boolean hasDesignation() {
     return ((bitField0_ & 0x00000001) == 0x00000001);
   }
   /**
-   * <code>required .proto.Captain captain = 1;</code>
+   * <code>required string designation = 1;</code>
+   */
+  public java.lang.String getDesignation() {
+    java.lang.Object ref = designation_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (bs.isValidUtf8()) {
+        designation_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <code>required string designation = 1;</code>
+   */
+  public com.google.protobuf.ByteString
+      getDesignationBytes() {
+    java.lang.Object ref = designation_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      designation_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CAPTAIN_FIELD_NUMBER = 2;
+  private proto.Captain captain_;
+  /**
+   * <code>required .proto.Captain captain = 2;</code>
+   */
+  public boolean hasCaptain() {
+    return ((bitField0_ & 0x00000002) == 0x00000002);
+  }
+  /**
+   * <code>required .proto.Captain captain = 2;</code>
    */
   public proto.Captain getCaptain() {
     return captain_ == null ? proto.Captain.getDefaultInstance() : captain_;
   }
   /**
-   * <code>required .proto.Captain captain = 1;</code>
+   * <code>required .proto.Captain captain = 2;</code>
    */
   public proto.CaptainOrBuilder getCaptainOrBuilder() {
     return captain_ == null ? proto.Captain.getDefaultInstance() : captain_;
   }
 
-  public static final int SPACESHIPS_FIELD_NUMBER = 2;
+  public static final int SPACESHIPS_FIELD_NUMBER = 3;
   private java.util.List<proto.SpaceShip> spaceships_;
   /**
-   * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+   * <code>repeated .proto.SpaceShip spaceships = 3;</code>
    */
   public java.util.List<proto.SpaceShip> getSpaceshipsList() {
     return spaceships_;
   }
   /**
-   * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+   * <code>repeated .proto.SpaceShip spaceships = 3;</code>
    */
   public java.util.List<? extends proto.SpaceShipOrBuilder> 
       getSpaceshipsOrBuilderList() {
     return spaceships_;
   }
   /**
-   * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+   * <code>repeated .proto.SpaceShip spaceships = 3;</code>
    */
   public int getSpaceshipsCount() {
     return spaceships_.size();
   }
   /**
-   * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+   * <code>repeated .proto.SpaceShip spaceships = 3;</code>
    */
   public proto.SpaceShip getSpaceships(int index) {
     return spaceships_.get(index);
   }
   /**
-   * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+   * <code>repeated .proto.SpaceShip spaceships = 3;</code>
    */
   public proto.SpaceShipOrBuilder getSpaceshipsOrBuilder(
       int index) {
@@ -158,6 +207,10 @@ public  final class SpaceStation extends
     if (isInitialized == 1) return true;
     if (isInitialized == 0) return false;
 
+    if (!hasDesignation()) {
+      memoizedIsInitialized = 0;
+      return false;
+    }
     if (!hasCaptain()) {
       memoizedIsInitialized = 0;
       return false;
@@ -179,10 +232,13 @@ public  final class SpaceStation extends
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
     if (((bitField0_ & 0x00000001) == 0x00000001)) {
-      output.writeMessage(1, getCaptain());
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, designation_);
+    }
+    if (((bitField0_ & 0x00000002) == 0x00000002)) {
+      output.writeMessage(2, getCaptain());
     }
     for (int i = 0; i < spaceships_.size(); i++) {
-      output.writeMessage(2, spaceships_.get(i));
+      output.writeMessage(3, spaceships_.get(i));
     }
     unknownFields.writeTo(output);
   }
@@ -193,12 +249,15 @@ public  final class SpaceStation extends
 
     size = 0;
     if (((bitField0_ & 0x00000001) == 0x00000001)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, designation_);
+    }
+    if (((bitField0_ & 0x00000002) == 0x00000002)) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getCaptain());
+        .computeMessageSize(2, getCaptain());
     }
     for (int i = 0; i < spaceships_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, spaceships_.get(i));
+        .computeMessageSize(3, spaceships_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -217,6 +276,11 @@ public  final class SpaceStation extends
     proto.SpaceStation other = (proto.SpaceStation) obj;
 
     boolean result = true;
+    result = result && (hasDesignation() == other.hasDesignation());
+    if (hasDesignation()) {
+      result = result && getDesignation()
+          .equals(other.getDesignation());
+    }
     result = result && (hasCaptain() == other.hasCaptain());
     if (hasCaptain()) {
       result = result && getCaptain()
@@ -235,6 +299,10 @@ public  final class SpaceStation extends
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    if (hasDesignation()) {
+      hash = (37 * hash) + DESIGNATION_FIELD_NUMBER;
+      hash = (53 * hash) + getDesignation().hashCode();
+    }
     if (hasCaptain()) {
       hash = (37 * hash) + CAPTAIN_FIELD_NUMBER;
       hash = (53 * hash) + getCaptain().hashCode();
@@ -363,15 +431,17 @@ public  final class SpaceStation extends
     }
     public Builder clear() {
       super.clear();
+      designation_ = "";
+      bitField0_ = (bitField0_ & ~0x00000001);
       if (captainBuilder_ == null) {
         captain_ = null;
       } else {
         captainBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       if (spaceshipsBuilder_ == null) {
         spaceships_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
       } else {
         spaceshipsBuilder_.clear();
       }
@@ -402,15 +472,19 @@ public  final class SpaceStation extends
       if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
         to_bitField0_ |= 0x00000001;
       }
+      result.designation_ = designation_;
+      if (((from_bitField0_ & 0x00000002) == 0x00000002)) {
+        to_bitField0_ |= 0x00000002;
+      }
       if (captainBuilder_ == null) {
         result.captain_ = captain_;
       } else {
         result.captain_ = captainBuilder_.build();
       }
       if (spaceshipsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) == 0x00000002)) {
+        if (((bitField0_ & 0x00000004) == 0x00000004)) {
           spaceships_ = java.util.Collections.unmodifiableList(spaceships_);
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.spaceships_ = spaceships_;
       } else {
@@ -458,6 +532,11 @@ public  final class SpaceStation extends
 
     public Builder mergeFrom(proto.SpaceStation other) {
       if (other == proto.SpaceStation.getDefaultInstance()) return this;
+      if (other.hasDesignation()) {
+        bitField0_ |= 0x00000001;
+        designation_ = other.designation_;
+        onChanged();
+      }
       if (other.hasCaptain()) {
         mergeCaptain(other.getCaptain());
       }
@@ -465,7 +544,7 @@ public  final class SpaceStation extends
         if (!other.spaceships_.isEmpty()) {
           if (spaceships_.isEmpty()) {
             spaceships_ = other.spaceships_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSpaceshipsIsMutable();
             spaceships_.addAll(other.spaceships_);
@@ -478,7 +557,7 @@ public  final class SpaceStation extends
             spaceshipsBuilder_.dispose();
             spaceshipsBuilder_ = null;
             spaceships_ = other.spaceships_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
             spaceshipsBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                  getSpaceshipsFieldBuilder() : null;
@@ -493,6 +572,9 @@ public  final class SpaceStation extends
     }
 
     public final boolean isInitialized() {
+      if (!hasDesignation()) {
+        return false;
+      }
       if (!hasCaptain()) {
         return false;
       }
@@ -526,17 +608,93 @@ public  final class SpaceStation extends
     }
     private int bitField0_;
 
+    private java.lang.Object designation_ = "";
+    /**
+     * <code>required string designation = 1;</code>
+     */
+    public boolean hasDesignation() {
+      return ((bitField0_ & 0x00000001) == 0x00000001);
+    }
+    /**
+     * <code>required string designation = 1;</code>
+     */
+    public java.lang.String getDesignation() {
+      java.lang.Object ref = designation_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          designation_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>required string designation = 1;</code>
+     */
+    public com.google.protobuf.ByteString
+        getDesignationBytes() {
+      java.lang.Object ref = designation_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        designation_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>required string designation = 1;</code>
+     */
+    public Builder setDesignation(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      designation_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>required string designation = 1;</code>
+     */
+    public Builder clearDesignation() {
+      bitField0_ = (bitField0_ & ~0x00000001);
+      designation_ = getDefaultInstance().getDesignation();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>required string designation = 1;</code>
+     */
+    public Builder setDesignationBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  bitField0_ |= 0x00000001;
+      designation_ = value;
+      onChanged();
+      return this;
+    }
+
     private proto.Captain captain_ = null;
     private com.google.protobuf.SingleFieldBuilderV3<
         proto.Captain, proto.Captain.Builder, proto.CaptainOrBuilder> captainBuilder_;
     /**
-     * <code>required .proto.Captain captain = 1;</code>
+     * <code>required .proto.Captain captain = 2;</code>
      */
     public boolean hasCaptain() {
-      return ((bitField0_ & 0x00000001) == 0x00000001);
+      return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .proto.Captain captain = 1;</code>
+     * <code>required .proto.Captain captain = 2;</code>
      */
     public proto.Captain getCaptain() {
       if (captainBuilder_ == null) {
@@ -546,7 +704,7 @@ public  final class SpaceStation extends
       }
     }
     /**
-     * <code>required .proto.Captain captain = 1;</code>
+     * <code>required .proto.Captain captain = 2;</code>
      */
     public Builder setCaptain(proto.Captain value) {
       if (captainBuilder_ == null) {
@@ -558,11 +716,11 @@ public  final class SpaceStation extends
       } else {
         captainBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       return this;
     }
     /**
-     * <code>required .proto.Captain captain = 1;</code>
+     * <code>required .proto.Captain captain = 2;</code>
      */
     public Builder setCaptain(
         proto.Captain.Builder builderForValue) {
@@ -572,15 +730,15 @@ public  final class SpaceStation extends
       } else {
         captainBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       return this;
     }
     /**
-     * <code>required .proto.Captain captain = 1;</code>
+     * <code>required .proto.Captain captain = 2;</code>
      */
     public Builder mergeCaptain(proto.Captain value) {
       if (captainBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) == 0x00000001) &&
+        if (((bitField0_ & 0x00000002) == 0x00000002) &&
             captain_ != null &&
             captain_ != proto.Captain.getDefaultInstance()) {
           captain_ =
@@ -592,11 +750,11 @@ public  final class SpaceStation extends
       } else {
         captainBuilder_.mergeFrom(value);
       }
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       return this;
     }
     /**
-     * <code>required .proto.Captain captain = 1;</code>
+     * <code>required .proto.Captain captain = 2;</code>
      */
     public Builder clearCaptain() {
       if (captainBuilder_ == null) {
@@ -605,19 +763,19 @@ public  final class SpaceStation extends
       } else {
         captainBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       return this;
     }
     /**
-     * <code>required .proto.Captain captain = 1;</code>
+     * <code>required .proto.Captain captain = 2;</code>
      */
     public proto.Captain.Builder getCaptainBuilder() {
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000002;
       onChanged();
       return getCaptainFieldBuilder().getBuilder();
     }
     /**
-     * <code>required .proto.Captain captain = 1;</code>
+     * <code>required .proto.Captain captain = 2;</code>
      */
     public proto.CaptainOrBuilder getCaptainOrBuilder() {
       if (captainBuilder_ != null) {
@@ -628,7 +786,7 @@ public  final class SpaceStation extends
       }
     }
     /**
-     * <code>required .proto.Captain captain = 1;</code>
+     * <code>required .proto.Captain captain = 2;</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         proto.Captain, proto.Captain.Builder, proto.CaptainOrBuilder> 
@@ -647,9 +805,9 @@ public  final class SpaceStation extends
     private java.util.List<proto.SpaceShip> spaceships_ =
       java.util.Collections.emptyList();
     private void ensureSpaceshipsIsMutable() {
-      if (!((bitField0_ & 0x00000002) == 0x00000002)) {
+      if (!((bitField0_ & 0x00000004) == 0x00000004)) {
         spaceships_ = new java.util.ArrayList<proto.SpaceShip>(spaceships_);
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000004;
        }
     }
 
@@ -657,7 +815,7 @@ public  final class SpaceStation extends
         proto.SpaceShip, proto.SpaceShip.Builder, proto.SpaceShipOrBuilder> spaceshipsBuilder_;
 
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public java.util.List<proto.SpaceShip> getSpaceshipsList() {
       if (spaceshipsBuilder_ == null) {
@@ -667,7 +825,7 @@ public  final class SpaceStation extends
       }
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public int getSpaceshipsCount() {
       if (spaceshipsBuilder_ == null) {
@@ -677,7 +835,7 @@ public  final class SpaceStation extends
       }
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public proto.SpaceShip getSpaceships(int index) {
       if (spaceshipsBuilder_ == null) {
@@ -687,7 +845,7 @@ public  final class SpaceStation extends
       }
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public Builder setSpaceships(
         int index, proto.SpaceShip value) {
@@ -704,7 +862,7 @@ public  final class SpaceStation extends
       return this;
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public Builder setSpaceships(
         int index, proto.SpaceShip.Builder builderForValue) {
@@ -718,7 +876,7 @@ public  final class SpaceStation extends
       return this;
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public Builder addSpaceships(proto.SpaceShip value) {
       if (spaceshipsBuilder_ == null) {
@@ -734,7 +892,7 @@ public  final class SpaceStation extends
       return this;
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public Builder addSpaceships(
         int index, proto.SpaceShip value) {
@@ -751,7 +909,7 @@ public  final class SpaceStation extends
       return this;
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public Builder addSpaceships(
         proto.SpaceShip.Builder builderForValue) {
@@ -765,7 +923,7 @@ public  final class SpaceStation extends
       return this;
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public Builder addSpaceships(
         int index, proto.SpaceShip.Builder builderForValue) {
@@ -779,7 +937,7 @@ public  final class SpaceStation extends
       return this;
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public Builder addAllSpaceships(
         java.lang.Iterable<? extends proto.SpaceShip> values) {
@@ -794,12 +952,12 @@ public  final class SpaceStation extends
       return this;
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public Builder clearSpaceships() {
       if (spaceshipsBuilder_ == null) {
         spaceships_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
         spaceshipsBuilder_.clear();
@@ -807,7 +965,7 @@ public  final class SpaceStation extends
       return this;
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public Builder removeSpaceships(int index) {
       if (spaceshipsBuilder_ == null) {
@@ -820,14 +978,14 @@ public  final class SpaceStation extends
       return this;
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public proto.SpaceShip.Builder getSpaceshipsBuilder(
         int index) {
       return getSpaceshipsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public proto.SpaceShipOrBuilder getSpaceshipsOrBuilder(
         int index) {
@@ -837,7 +995,7 @@ public  final class SpaceStation extends
       }
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public java.util.List<? extends proto.SpaceShipOrBuilder> 
          getSpaceshipsOrBuilderList() {
@@ -848,14 +1006,14 @@ public  final class SpaceStation extends
       }
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public proto.SpaceShip.Builder addSpaceshipsBuilder() {
       return getSpaceshipsFieldBuilder().addBuilder(
           proto.SpaceShip.getDefaultInstance());
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public proto.SpaceShip.Builder addSpaceshipsBuilder(
         int index) {
@@ -863,7 +1021,7 @@ public  final class SpaceStation extends
           index, proto.SpaceShip.getDefaultInstance());
     }
     /**
-     * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+     * <code>repeated .proto.SpaceShip spaceships = 3;</code>
      */
     public java.util.List<proto.SpaceShip.Builder> 
          getSpaceshipsBuilderList() {
@@ -876,7 +1034,7 @@ public  final class SpaceStation extends
         spaceshipsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             proto.SpaceShip, proto.SpaceShip.Builder, proto.SpaceShipOrBuilder>(
                 spaceships_,
-                ((bitField0_ & 0x00000002) == 0x00000002),
+                ((bitField0_ & 0x00000004) == 0x00000004),
                 getParentForChildren(),
                 isClean());
         spaceships_ = null;

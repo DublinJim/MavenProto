@@ -8,38 +8,52 @@ public interface SpaceStationOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>required .proto.Captain captain = 1;</code>
+   * <code>required string designation = 1;</code>
+   */
+  boolean hasDesignation();
+  /**
+   * <code>required string designation = 1;</code>
+   */
+  java.lang.String getDesignation();
+  /**
+   * <code>required string designation = 1;</code>
+   */
+  com.google.protobuf.ByteString
+      getDesignationBytes();
+
+  /**
+   * <code>required .proto.Captain captain = 2;</code>
    */
   boolean hasCaptain();
   /**
-   * <code>required .proto.Captain captain = 1;</code>
+   * <code>required .proto.Captain captain = 2;</code>
    */
   proto.Captain getCaptain();
   /**
-   * <code>required .proto.Captain captain = 1;</code>
+   * <code>required .proto.Captain captain = 2;</code>
    */
   proto.CaptainOrBuilder getCaptainOrBuilder();
 
   /**
-   * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+   * <code>repeated .proto.SpaceShip spaceships = 3;</code>
    */
   java.util.List<proto.SpaceShip> 
       getSpaceshipsList();
   /**
-   * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+   * <code>repeated .proto.SpaceShip spaceships = 3;</code>
    */
   proto.SpaceShip getSpaceships(int index);
   /**
-   * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+   * <code>repeated .proto.SpaceShip spaceships = 3;</code>
    */
   int getSpaceshipsCount();
   /**
-   * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+   * <code>repeated .proto.SpaceShip spaceships = 3;</code>
    */
   java.util.List<? extends proto.SpaceShipOrBuilder> 
       getSpaceshipsOrBuilderList();
   /**
-   * <code>repeated .proto.SpaceShip spaceships = 2;</code>
+   * <code>repeated .proto.SpaceShip spaceships = 3;</code>
    */
   proto.SpaceShipOrBuilder getSpaceshipsOrBuilder(
       int index);

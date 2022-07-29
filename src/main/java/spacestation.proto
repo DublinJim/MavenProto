@@ -25,7 +25,8 @@ message SpaceShip{
 
 
 message SpaceStation{
-  required Captain captain = 1;
-  repeated SpaceShip spaceships = 2;
+  required string designation =1;
+  required Captain captain = 2;
+  repeated SpaceShip spaceships = 3;
 
 }

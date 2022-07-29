@@ -42,10 +42,11 @@ public final class SpaceStationOuter {
       "\n\004name\030\001 \002(\t\022%\n\004race\030\002 \001(\0162\027.proto.Capta" +
       "in.RaceType\".\n\010RaceType\022\t\n\005FURRY\020\000\022\n\n\006VU" +
       "LCAN\020\001\022\013\n\007KLINGON\020\002\"6\n\tSpaceShip\022\014\n\004name" +
-      "\030\001 \002(\t\022\014\n\004crew\030\002 \001(\005\022\r\n\005cargo\030\003 \001(\t\"U\n\014S" +
-      "paceStation\022\037\n\007captain\030\001 \002(\0132\016.proto.Cap" +
-      "tain\022$\n\nspaceships\030\002 \003(\0132\020.proto.SpaceSh" +
-      "ipB\025B\021SpaceStationOuterP\001"
+      "\030\001 \002(\t\022\014\n\004crew\030\002 \001(\005\022\r\n\005cargo\030\003 \001(\t\"j\n\014S" +
+      "paceStation\022\023\n\013designation\030\001 \002(\t\022\037\n\007capt" +
+      "ain\030\002 \002(\0132\016.proto.Captain\022$\n\nspaceships\030" +
+      "\003 \003(\0132\020.proto.SpaceShipB\025B\021SpaceStationO" +
+      "uterP\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
@@ -76,7 +77,7 @@ public final class SpaceStationOuter {
     internal_static_proto_SpaceStation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_proto_SpaceStation_descriptor,
-        new java.lang.String[] { "Captain", "Spaceships", });
+        new java.lang.String[] { "Designation", "Captain", "Spaceships", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

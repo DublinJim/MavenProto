@@ -14,27 +14,16 @@ public class Main {
             .setRace(RaceType.VULCAN)
             .build();
 
-        System.out.println(joe.getName());
-        SpaceStation.Builder ds9 = SpaceStation.newBuilder();
-
-        System.out.println(ds9.getCaptain());
-        SpaceShip.Builder boeing = SpaceShip.newBuilder();
-        boeing.setCrew(3).setCargo("gold").setName("Orion").build();
-
-        ds9.setCaptain(joe).addSpaceships(boeing).build();
-        System.out.println(ds9);
-
-        ds9.setCaptain(Captain.newBuilder()
-            .setName("Paddy")
-            .setRace(RaceType.KLINGON))
-            .addSpaceships(SpaceShip.newBuilder()
-                .setName("Task runner")
-                .setCargo("Silver")
-                .setCrew(3)
-                .build());
+        SpaceStation.Builder stationMaker = SpaceStation.newBuilder();
+        SpaceShip.Builder shipMaker = SpaceShip.newBuilder();
+        Captain.Builder capMaker = Captain.newBuilder();
 
 
-        System.out.println(ds9);
+
+
+      
+
+
 
 
     }

@@ -1,0 +1,18 @@
+syntax ="proto2";
+
+
+package studentsClasses;
+option java_multiple_files=true;
+
+  message Student{
+  required string name =1;
+  required int32 id =2;
+
+
+  }
+
+  message Classroom{
+  required string prof =1;
+  repeated Student student =2;
+
+  }
